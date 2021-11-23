@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <div class= "container">
+        <head>
+            <title>Vehicle Identifier</title> 
+            <link  rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/stylize.css') }}" >
+            <body>
+                <center><h1>Turners Vehicle Classification</h1>
+                <p>This is a prototype of a vehicle identifier. The identifier will classify vehicles as being either a sedan, hatchback, pick-up truck or van</p>
+                </center>
+            <div class="row">
+                <p>
+                    <! Looks for flashed message> 
+                    {% with messages = get_flashed_messages() %} 
+                    {% if message %}
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{message}}</li>
+                        {% endfor %} 
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+                </p>
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <dl>
+                        <p>
+                            <input type = "file" name = "file" class = "form-control" autocomplete="off" required>
+                        </p>
+                    </dl>
+                    <p>
+                        <input type="submit" value = "Submit" class = "btn btn-info">
+                    </p>
+                    <br>
+                    <center><img src="{{path}}"></center>
+                    <center>
+                        <br>
+                            <p style="color:green;"></pstyle>
+                                 {{vehicle_description}}
+                            </p>                   
+                    </center>
+                </form>
+            </div>
+            </body>   
+        </head>
+    </div>
+</html>

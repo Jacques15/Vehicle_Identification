@@ -1,0 +1,23 @@
+h1{
+	color:green;
+	font-size: 50px;
+}
+img{
+	width:400px;
+	height: auto;
+}
+
+p1{
+	color:green;
+	font-size: 20px;
+	padding-right:10px;
+}
+
+.container{
+	width: 500px;
+	margin: auto;
+	border: 2px green dotted;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
